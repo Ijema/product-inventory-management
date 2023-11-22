@@ -5,40 +5,40 @@ import ProductPage from './component/product_page';
 
 import CartPage from './component/cart_page';
 
-import { createBrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Form from './component/form';
 import { useState } from 'react';
 
 
 
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element:<>
-      <h3>Products</h3>
-      <ProductPage/>
-    </>
-  },
-  {
-    path:"/cart",
-    element:<>
-      <h3>Cart Products</h3>
-      <CartPage/>
-    </>
-  },
-  {
-    path:"/about-us",
-    element:<h1>Pending</h1>
-  },
-  {
-    path:"/add",
-    element:<>
-      <h2>Add Product</h2>
-      <Form/>
-    </>
-  },
-])
+// const router = createBrowserRouter([
+//   {
+//     path:"/",
+//     element:<>
+//       <h3>Products</h3>
+//       <ProductPage/>
+//     </>
+//   },
+//   {
+//     path:"/cart",
+//     element:<>
+//       <h3>Cart Products</h3>
+//       <CartPage/>
+//     </>
+//   },
+//   {
+//     path:"/about-us",
+//     element:<h1>Pending</h1>
+//   },
+//   {
+//     path:"/add",
+//     element:<>
+//       <h2>Add Product</h2>
+//       <Form/>
+//     </>
+//   },
+// ])
 
 
 function App() {
