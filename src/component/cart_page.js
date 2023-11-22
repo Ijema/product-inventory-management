@@ -1,6 +1,4 @@
 import Cart from "./cart"
-import { useState,useEffect } from "react"
-import { saveCart,getCartFromLocalStorage } from "../utils"
 
 function CartPage(props){
 //     const [cartItem,props.setCartItems] = useState([])

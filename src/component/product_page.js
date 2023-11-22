@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { DownOutlined } from '@ant-design/icons';
-import { Form, Radio, Space, Switch, Table } from 'antd';
+import { Space, Table } from 'antd';
 
 import { inventory } from '../data/inventory';
 
@@ -65,72 +64,72 @@ const PtoductPage = (props) => {
       sorter: true,
       render: (e) => (
         <Space size="middle">
-          <a onClick={()=>{
+          <button className="delete_link" onClick={()=>{
             remove_product(e)
-          }}>Delete</a>
-          <div onClick={()=>{props.addToCart(e)}}>
+          }}>Delete</button>
+          <button className="delete_link" onClick={()=>{props.addToCart(e)}}>
             Add to list
-          </div>
+          </button>
         </Space>
       ),
     },
   ];
 
 
-  const [bordered, setBordered] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [size, setSize] = useState('large');
-  const [expandable, setExpandable] = useState(defaultExpandable);
-  const [showTitle, setShowTitle] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
-  const [showfooter, setShowFooter] = useState(true);
-  const [rowSelection, setRowSelection] = useState({});
-  const [hasData, setHasData] = useState(true);
-  const [tableLayout, setTableLayout] = useState();
-  const [top, setTop] = useState('none');
-  const [bottom, setBottom] = useState('bottomRight');
-  const [ellipsis, setEllipsis] = useState(false);
-  const [yScroll, setYScroll] = useState(false);
-  const [xScroll, setXScroll] = useState();
-  const handleBorderChange = (enable) => {
-    setBordered(enable);
-  };
-  const handleLoadingChange = (enable) => {
-    setLoading(enable);
-  };
-  const handleSizeChange = (e) => {
-    setSize(e.target.value);
-  };
-  const handleTableLayoutChange = (e) => {
-    setTableLayout(e.target.value);
-  };
-  const handleExpandChange = (enable) => {
-    setExpandable(enable ? defaultExpandable : undefined);
-  };
-  const handleEllipsisChange = (enable) => {
-    setEllipsis(enable);
-  };
-  const handleTitleChange = (enable) => {
-    setShowTitle(enable);
-  };
-  const handleHeaderChange = (enable) => {
-    setShowHeader(enable);
-  };
-  const handleFooterChange = (enable) => {
-    setShowFooter(enable);
-  };
-  const handleRowSelectionChange = (enable) => {
-    setRowSelection(enable ? {} : undefined);
-  };
-  const handleYScrollChange = (enable) => {
-    setYScroll(enable);
-  };
-  const handleXScrollChange = (e) => {
-    setXScroll(e.target.value);
-  };
-  const handleDataChange = (newHasData) => {
-    setHasData(newHasData);
-  };
+  const [bordered, ] = useState(false);
+  const [loading, ] = useState(false);
+  const [size, ] = useState('large');
+  const [expandable, ] = useState(defaultExpandable);
+  const [showTitle, ] = useState(false);
+  const [showHeader, ] = useState(true);
+  const [showfooter, ] = useState(true);
+  const [rowSelection, ] = useState({});
+  const [hasData, ] = useState(true);
+  const [tableLayout, ] = useState();
+  const [top] = useState('none');
+  const [bottom] = useState('bottomRight');
+  const [ellipsis, ] = useState(false);
+  const [yScroll, ] = useState(false);
+  const [xScroll, ] = useState();
+  // const handleBorderChange = (enable) => {
+  //   setBordered(enable);
+  // };
+  // const handleLoadingChange = (enable) => {
+  //   setLoading(enable);
+  // };
+  // const handleSizeChange = (e) => {
+  //   setSize(e.target.value);
+  // };
+  // const handleTableLayoutChange = (e) => {
+  //   setTableLayout(e.target.value);
+  // };
+  // const handleExpandChange = (enable) => {
+  //   setExpandable(enable ? defaultExpandable : undefined);
+  // };
+  // const handleEllipsisChange = (enable) => {
+  //   setEllipsis(enable);
+  // };
+  // const handleTitleChange = (enable) => {
+  //   setShowTitle(enable);
+  // };
+  // const handleHeaderChange = (enable) => {
+  //   setShowHeader(enable);
+  // };
+  // const handleFooterChange = (enable) => {
+  //   setShowFooter(enable);
+  // };
+  // const handleRowSelectionChange = (enable) => {
+  //   setRowSelection(enable ? {} : undefined);
+  // };
+  // const handleYScrollChange = (enable) => {
+  //   setYScroll(enable);
+  // };
+  // const handleXScrollChange = (e) => {
+  //   setXScroll(e.target.value);
+  // };
+  // const handleDataChange = (newHasData) => {
+  //   setHasData(newHasData);
+  // };
   const scroll = {};
   if (yScroll) {
     scroll.y = 240;

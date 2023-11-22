@@ -1,17 +1,12 @@
-import Sidebar from './component/sidebar';
-import Navbar from './component/navbar';
-import Main from './component/main';
 import {HomeOutlined,PlusOutlined ,ShoppingCartOutlined, BellOutlined} from '@ant-design/icons'
 import './App.css';
 
 import ProductPage from './component/product_page';
 
-import { Space, Table, Tag } from 'antd';
-import Cart from './component/cart';
 import CartPage from './component/cart_page';
 
-import { createBrowserRouter, RouterProvider, Route, Routes } from 'react-router-dom';
-import { Link, useNavigate } from 'react-router-dom';
+import { createBrowserRouter, Route, Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Form from './component/form';
 import { useState } from 'react';
 
